@@ -7,10 +7,10 @@ document.getElementById("year").textContent = new Date().getFullYear();
   if (!el) return;
 
   const phrases = [
-    "Python developer.",
-    "SQL & DBMS enthusiast.",
+    "Python & SQL basics.",
     "Learning C++.",
     "Diving into DSA.",
+    "Exploring UI/UX.",
   ];
 
   let phraseIndex = 0;
