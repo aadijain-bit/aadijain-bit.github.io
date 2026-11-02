@@ -1,22 +1,24 @@
 :root {
-  --bg: #0f1115;
-  --surface: #171a21;
-  --surface-2: #1e222b;
-  --text: #e6e8ee;
-  --muted: #9aa2b1;
-  --accent: #5eead4;
-  --border: #262b36;
+  --bg: #090a0e;
+  --surface: #12141b;
+  --surface-2: #1c1f2a;
+  --text: #f4f6fa;
+  --muted: #b3bbcb;
+  --accent: #4fe3c8;
+  --accent-2: #fbbf6a;
+  --border: #2f3544;
   --radius: 14px;
 }
 
 [data-theme="light"] {
-  --bg: #f6f7f9;
+  --bg: #f3f4f7;
   --surface: #ffffff;
-  --surface-2: #eef0f4;
-  --text: #171a21;
-  --muted: #5b6472;
-  --accent: #0d9488;
-  --border: #e2e5ea;
+  --surface-2: #e6e9ef;
+  --text: #0e1117;
+  --muted: #434c5c;
+  --accent: #0b6e63;
+  --accent-2: #9a5b00;
+  --border: #c5cbd6;
 }
 
 * {
@@ -196,7 +198,11 @@ main {
 
 .btn--primary {
   background: var(--accent);
-  color: var(--bg);
+  color: #05110f;
+}
+
+[data-theme="light"] .btn--primary {
+  color: #ffffff;
 }
 
 .btn--ghost {
@@ -298,9 +304,18 @@ main {
   letter-spacing: 0.05em;
 }
 
+.skill-card__tag--basics {
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  color: var(--accent);
+}
+
 .skill-card__tag--learning {
-  background: color-mix(in srgb, var(--muted) 18%, transparent);
-  color: var(--muted);
+  background: color-mix(in srgb, var(--accent-2) 18%, transparent);
+  color: var(--accent-2);
+}
+
+.skill-card--wide {
+  grid-column: 1 / -1;
 }
 
 .skill-card p {
@@ -372,6 +387,31 @@ main {
   color: var(--muted);
   font-size: 0.98rem;
   max-width: 560px;
+}
+
+/* Projects */
+.project-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 2rem 1.5rem;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.project-placeholder__badge {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent-2) 18%, transparent);
+  color: var(--accent-2);
+}
+
+.project-placeholder p {
+  color: var(--muted);
 }
 
 /* Contact */
